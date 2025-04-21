@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 10:12:57 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/21 14:18:32 by anferre2         ###   ########.fr       */
+/*   Created: 2025/04/21 15:46:23 by anferre2          #+#    #+#             */
+/*   Updated: 2025/04/21 16:03:57 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if ((n >= 48 && n <= 57) || (n >= 65 && n <= 90) || (n >= 97 && n <= 122))
-		return (1);
-	return (0);
+	t_list	*newlst;
+	t_list	*new_obj;
+	void	*cont;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	newlst = NULL;
+	while (lst)
+	{
+		cont = f(lst->content);
+		new_obj = ft_lstnew(cont);
+		if (!new_obj)
+		{
+			del(cont);
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, new_obj);
+		lst = lst->next;
+	}
+	return (newlst);
 }

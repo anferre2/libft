@@ -6,31 +6,31 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:48:04 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/07 17:41:24 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:11:25 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	char d;
+	int		i;
+	char	d;
 
 	i = 0;
 	d = (char) c;
 	while (s[i])
 	{
 		if (s[i] == d)
-			return((char *) &s[i]);
+			return ((char *) &s[i]);
 		i++;
 	}
 	if (d == '\0')
-		return((char *) &s[i]);
+		return ((char *) &s[i]);
 	return (NULL);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main(void)
 {
     const char *str = "Hello, world!";
@@ -41,11 +41,11 @@ int main(void)
     // Check if the result is not NULL (i.e., the character was found)
     if (result != NULL)
     {
-        printf("Substring starting from the character: %s\n", result);  // Print the substring starting from the found character
+        printf("Substring: %s\n", result);
     }
     else
     {
         printf("Character '%c' not found in the string.\n", 'o');
     }
     return 0;
-}
+} */

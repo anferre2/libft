@@ -6,7 +6,7 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:26:44 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/08 15:51:31 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:04:27 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')

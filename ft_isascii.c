@@ -6,13 +6,15 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:21:53 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/07 10:25:57 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/21 14:18:36 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int n)
 {
 	if (n >= 0 && n <= 127)
-		return(1);
-	return(0);
+		return (1);
+	return (0);
 }

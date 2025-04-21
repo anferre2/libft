@@ -6,13 +6,13 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 14:26:54 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/07 15:05:07 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/15 18:50:21 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (dest > src)
 	{
@@ -26,11 +26,11 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main(void)
 {
 	char dst[] = "buceta";
 
 	ft_memmove((dst + 2), dst, 3);
 	printf("resultado: %s\n", dst);
-}
+} */

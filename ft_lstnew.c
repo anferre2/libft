@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 10:12:57 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/21 14:18:32 by anferre2         ###   ########.fr       */
+/*   Created: 2025/04/21 14:05:53 by anferre2          #+#    #+#             */
+/*   Updated: 2025/04/21 14:38:14 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int n)
+t_list	*ft_lstnew(void *content)
 {
-	if ((n >= 48 && n <= 57) || (n >= 65 && n <= 90) || (n >= 97 && n <= 122))
-		return (1);
-	return (0);
+	t_list	*new_node;
+
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
+/*int main()
+{
+	char *str = "HEllo, World!";
+
+	t_list *node = ft_lstnew(str);
+	if (node)
+	{
+		printf("REsult: %s\n", (char *)node->content);
+	}
+	free(node);
+	return (0);
+}*/

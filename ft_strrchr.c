@@ -6,15 +6,15 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:08:52 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/08 16:20:03 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:10:51 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	d;
+	char		d;
 	int			i;
 	int			len;
 
@@ -40,10 +40,10 @@ int main(void)
     // Call ft_strchr to find the first occurrence of 'o' in the string
     char *result = ft_strrchr(str, 'e');
     
-    // Check if the result is not NULL (i.e., the character was found)
+
     if (result != NULL)
     {
-        printf("Substring starting from the character: %s\n", result);  // Print the substring starting from the found character
+        printf("Substring: %s\n", result);
     }
     else
     {

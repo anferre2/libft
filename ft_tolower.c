@@ -6,15 +6,15 @@
 /*   By: anferre2 <anferre2@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:24:22 by anferre2          #+#    #+#             */
-/*   Updated: 2025/04/07 16:25:57 by anferre2         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:11:51 by anferre2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
-		return(c + 32);
-	return(c);
+		return (c + 32);
+	return (c);
 }
